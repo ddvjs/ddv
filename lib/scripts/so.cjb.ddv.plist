@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>so.cjb.ddv</string>
+	<key>UserName</key>
+	<string>%USER%</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/sh</string>
+		<string>-c</string>
+		<string>%DDV_PATH% resurrect</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>OnDemand</key>
+	<false/>
+	<key>LaunchOnlyOnce</key>
+	<true/>
+	<key>EnvironmentVariables</key>
+		<dict>
+			<key>PATH</key>
+			<string>%NODE_PATH%</string>
+			<key>DDV_HOME</key>
+			<string>%DDV_HOME%</string>
+			<key>HOME_PATH</key>
+			<string>%HOME_PATH%</string>
+			<key>DDV_HOME_PATH</key>
+			<string>%DDV_HOME_PATH%</string>
+			<key>DDV_CONFIG_PATH</key>
+			<string>%DDV_CONFIG_PATH%</string>
+			<key>DDV_PATH</key>
+			<string>%DDV_PATH%</string>
+		</dict>
+	<key>StandardErrorPath</key>
+	<string>%DDV_ERR_LOG_FILE_PATH%</string>
+	<key>StandardOutPath</key>
+	<string>%DDV_OUT_LOG_FILE_PATH%</string>
+</dict>
+</plist>
