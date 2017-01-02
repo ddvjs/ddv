@@ -12,7 +12,7 @@
   "dependencies": {
     "cjb-base": ">=0.0.35",
     "ddv-worker": ">=0.0.2",
-    "cjb-jstelnet": ">=0.0.1",
+    "ddv-telnet": ">=0.0.1",
     "cli-table2": "~0.2.0",
     "colors": "~1.1.2",
     "commander": "~2.9.0",
