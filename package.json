@@ -1,50 +1,4 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "ddv",
-        "scope": null,
-        "escapedName": "ddv",
-        "name": "ddv",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
-      },
-      "/Users/hua/Desktop"
-    ]
-  ],
-  "_from": "ddv@latest",
-  "_id": "ddv@1.1.27",
-  "_inCache": true,
-  "_location": "/ddv",
-  "_nodeVersion": "7.0.0",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/ddv-1.1.27.tgz_1481822659776_0.5149420774541795"
-  },
-  "_npmUser": {
-    "name": "yuchonghua",
-    "email": "yuchonghua@163.com"
-  },
-  "_npmVersion": "3.10.8",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "ddv",
-    "scope": null,
-    "escapedName": "ddv",
-    "name": "ddv",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/ddv/-/ddv-1.1.27.tgz",
-  "_shasum": "b47a69583c51c8fd76aa90cc456fd8789c34a500",
-  "_shrinkwrap": null,
-  "_spec": "ddv",
-  "_where": "/Users/hua/Desktop",
   "author": {
     "name": "hua"
   },
@@ -57,13 +11,14 @@
   },
   "dependencies": {
     "cjb-base": ">=0.0.35",
-    "cjb-jsnet": ">=0.0.30",
+    "ddv-worker": ">=0.0.2",
     "cjb-jstelnet": ">=0.0.1",
     "cli-table2": "~0.2.0",
     "colors": "~1.1.2",
     "commander": "~2.9.0",
     "crypto-js": ">=3.1.6",
     "lcid": ">=1.0.0",
+    "npm-run": "~4.1",
     "tail": ">=1.2.1",
     "url": ">=0.11.0",
     "ws": ">=1.0.1"
@@ -73,17 +28,11 @@
   "directories": {
     "bin": "./bin",
     "lib": "./lib",
-    "doc": "./doc",
-    "example": "./examples"
-  },
-  "dist": {
-    "shasum": "b47a69583c51c8fd76aa90cc456fd8789c34a500",
-    "tarball": "https://registry.npmjs.org/ddv/-/ddv-1.1.27.tgz"
+    "doc": "./doc"
   },
   "engines": {
     "node": ">=4.0.0"
   },
-  "gitHead": "d99763d72ec0bdb9037b9fd774af68be64609165",
   "homepage": "https://github.com/chengjiabao/ddv#readme",
   "jshintConfig": {
     "esversion": 6,
@@ -112,11 +61,21 @@
   "name": "ddv",
   "optionalDependencies": {},
   "preferGlobal": true,
-  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chengjiabao/ddv.git"
   },
-  "scripts": {},
+  "scripts": {
+      "ls":"ddv ls",
+      "version":"ddv version",
+      "add":"ddv add",
+      "remove":"ddv remove",
+      "start":"ddv start",
+      "restart":"ddv restart",
+      "reload":"ddv reload",
+      "stop":"ddv stop",
+      "kill":"ddv kill",
+      "help":"ddv help"
+  },
   "version": "1.1.27"
 }
