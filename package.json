@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "cjb-base": ">=0.0.35",
-    "ddv-worker": ">=0.0.2",
+    "ddv-worker": ">=0.0.8",
     "ddv-telnet": ">=0.0.1",
     "cli-table2": "~0.2.0",
     "colors": "~1.1.2",
     "commander": "~2.9.0",
     "crypto-js": ">=3.1.6",
+    "npm-which": "~3.0.1",
     "lcid": ">=1.0.0",
-    "npm-run": "~4.1",
     "tail": ">=1.2.1",
     "url": ">=0.11.0",
     "ws": ">=1.0.1"
@@ -77,5 +77,5 @@
       "kill":"ddv kill",
       "help":"ddv help"
   },
-  "version": "1.1.27"
+  "version": "1.1.29"
 }
