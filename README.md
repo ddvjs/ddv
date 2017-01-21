@@ -1,5 +1,7 @@
 ### ddv 基本使用命令
 
+[![Join the chat at https://gitter.im/ddvjs/ddv](https://badges.gitter.im/ddvjs/ddv.svg)](https://gitter.im/ddvjs/ddv?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 >* `ddv` 服务 是基于 `nodejs` 开发的一个方便`前端开发项目`的`服务器`
 >* `ddv` 的核心不在于框架，而是整合目前流行的框架和打包功能
 >* 减少程序员的`服务部署成本`和`构建环境的配置成本`
