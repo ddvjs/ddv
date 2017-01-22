@@ -1,0 +1,1 @@
+sudo rm -rf /usr/local/lib/node_modules/ddv/node_modules/ddv-worker&&sudo cp -r /Users/hua/Documents/其他项目/ddv-worker /usr/local/lib/node_modules/ddv/node_modules/&&sudo rm -rf /Users/hua/Documents/其他项目/warderCdn/node_modules/ddv-worker&&sudo cp -r /Users/hua/Documents/其他项目/ddv-worker /Users/hua/Documents/其他项目/warderCdn/node_modules/&&sudo ddv ls&&sleep 1
