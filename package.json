@@ -6,7 +6,7 @@
     "ddv": "./bin/ddv.js"
   },
   "bugs": {
-    "url": "https://github.com/chengjiabao/ddv/issues",
+    "url": "https://github.com/ddvjs/ddv/issues",
     "email": "ddv@chengjiabao.cn"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "homepage": "https://github.com/chengjiabao/ddv#readme",
+  "homepage": "https://github.com/ddvjs/ddv#readme",
   "jshintConfig": {
     "esversion": 6,
     "undef": true,
@@ -63,7 +63,7 @@
   "preferGlobal": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chengjiabao/ddv.git"
+    "url": "git+https://github.com/ddvjs/ddv.git"
   },
   "scripts": {
       "ls":"ddv ls",
