@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var join = require('path').join
+
+var commands = []
+try {
+  commands = require('fs').readdirSync(__dirname)
+} catch (e) {
+  commands = []
+}
+commands = new Set(commands)
+
+var cmd = process.argv[2]
+var bin = null
+
+if (commands.has(cmd + '.ddvscripts.js')) {
+  process.argv.splice(2, 1)
+  bin = join(__dirname, cmd + '.ddvscripts.js')
+} else {
+  bin = null
+}
+
+if (bin) {
+  require(bin)
+} else {
+  console.log('不支持')
+  process.exit(1)
+}

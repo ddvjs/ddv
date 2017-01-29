@@ -3,7 +3,7 @@
     "name": "hua"
   },
   "bin": {
-    "ddv": "./bin/ddv.js"
+    "ddv": "./bin/ddv"
   },
   "bugs": {
     "url": "https://github.com/ddvjs/ddv/issues",
@@ -23,8 +23,13 @@
     "url": ">=0.11.0",
     "ws": ">=1.1.1"
   },
+  "devDependencies": {
+    "eslint": "^3.14.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
   "description": "花15分钟了解DDV，让协同开发触手可及",
-  "devDependencies": {},
   "directories": {
     "bin": "./bin",
     "lib": "./lib",
@@ -74,8 +79,22 @@
       "restart":"ddv restart",
       "reload":"ddv reload",
       "stop":"ddv stop",
+      "test":"ddv test",
       "kill":"ddv kill",
-      "help":"ddv help"
+      "help":"ddv help",
+      "lint": "eslint --ext .js bin lib",
+      "precommit": "npm run lint",
+      "prepublish": "node ./scripts/ddvscripts prepublish",
+      "postpublish": "node ./scripts/ddvscripts postpublish",
+      "preinstall": "node ./scripts/ddvscripts preinstall",
+      "postinstall": "node ./scripts/ddvscripts postinstall",
+      "preuninstall": "node ./scripts/ddvscripts preuninstall",
+      "postuninstall": "node ./scripts/ddvscripts postuninstall",
+      "preversion": "node ./scripts/ddvscripts preversion",
+      "postversion": "node ./scripts/ddvscripts postversion"
+  },
+  "config":{
+
   },
   "version": "1.1.31"
 }
