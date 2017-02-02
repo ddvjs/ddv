@@ -11,19 +11,22 @@
   },
   "dependencies": {
     "cjb-base": ">=0.0.35",
-    "ddv-worker": ">=0.0.8",
-    "ddv-telnet": ">=0.0.1",
     "cli-table2": "~0.2.0",
     "colors": "~1.1.2",
     "commander": "~2.9.0",
     "crypto-js": ">=3.1.6",
+    "ddv-telnet": ">=0.0.1",
+    "ddv-worker": ">=0.0.8",
+    "i18n-cli": "^0.1.0",
+    "mkdirp": "^0.5.1",
     "npm-which": "~3.0.1",
-    "lcid": ">=1.0.0",
+    "os-locale": "~2.0.0",
     "tail": ">=1.2.1",
     "url": ">=0.11.0",
     "ws": ">=1.1.1"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
     "eslint": "^3.14.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.0",
@@ -39,18 +42,7 @@
     "node": ">=4.0.0"
   },
   "homepage": "https://github.com/ddvjs/ddv#readme",
-  "jshintConfig": {
-    "esversion": 6,
-    "undef": true,
-    "unused": true,
-    "node": true,
-    "predef": [
-      "module",
-      "require",
-      "console",
-      "process"
-    ]
-  },
+  "jshintConfig": {},
   "keywords": [
     "ddv",
     "ddv.js"
@@ -63,7 +55,7 @@
       "email": "yuchonghua@163.com"
     }
   ],
-  "name": "ddv",
+  "name": "@pingqu/ddv",
   "optionalDependencies": {},
   "preferGlobal": true,
   "repository": {
@@ -71,30 +63,31 @@
     "url": "git+https://github.com/ddvjs/ddv.git"
   },
   "scripts": {
-      "ls":"ddv ls",
-      "version":"ddv version",
-      "add":"ddv add",
-      "remove":"ddv remove",
-      "start":"ddv start",
-      "restart":"ddv restart",
-      "reload":"ddv reload",
-      "stop":"ddv stop",
-      "test":"ddv test",
-      "kill":"ddv kill",
-      "help":"ddv help",
-      "lint": "eslint --ext .js bin lib",
-      "precommit": "npm run lint",
-      "prepublish": "node ./scripts/ddvscripts prepublish",
-      "postpublish": "node ./scripts/ddvscripts postpublish",
-      "preinstall": "node ./scripts/ddvscripts preinstall",
-      "postinstall": "node ./scripts/ddvscripts postinstall",
-      "preuninstall": "node ./scripts/ddvscripts preuninstall",
-      "postuninstall": "node ./scripts/ddvscripts postuninstall",
-      "preversion": "node ./scripts/ddvscripts preversion",
-      "postversion": "node ./scripts/ddvscripts postversion"
+    "ls": "ddv ls",
+    "version": "ddv version",
+    "add": "ddv add",
+    "remove": "ddv remove",
+    "start": "ddv start",
+    "restart": "ddv restart",
+    "reload": "ddv reload",
+    "stop": "ddv stop",
+    "test": "ddv test",
+    "kill": "ddv kill",
+    "help": "ddv help",
+    "lint": "eslint --ext .js lib bin/*",
+    "precommit": "npm run lint",
+    "prepublish": "node ./scripts/ddvscripts prepublish",
+    "postpublish": "node ./scripts/ddvscripts postpublish",
+    "preinstall": "node ./scripts/ddvscripts preinstall",
+    "postinstall": "node ./scripts/ddvscripts postinstall",
+    "preuninstall": "node ./scripts/ddvscripts preuninstall",
+    "postuninstall": "node ./scripts/ddvscripts postuninstall",
+    "preversion": "node ./scripts/ddvscripts preversion",
+    "postversion": "node ./scripts/ddvscripts postversion",
+    "envjson": "node ./scripts/ddvscripts envjson"
   },
-  "config":{
-
+  "config": {
+    "homepage": "ddfsaf"
   },
   "version": "1.1.31"
 }

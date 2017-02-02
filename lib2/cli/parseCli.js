@@ -50,87 +50,13 @@ const langs = (((locale) => {
   return langs
 })(config.locale))
 
-if (process.argv[process.argv.length - 1] === 'help' &&
-  process.argv.length > 1) {
-  process.argv.push('--help')
-}
-if (process.argv[process.argv.length - 1] === '/?' &&
-  process.argv.length > 1) {
-  process.argv.push('--help')
-}
-
-// 设定版本号
-c._version = config.version
-// 使用格式
-c.usage('[cmd] siteId')
-// 获取版本
-c.option('-v, --version', langs.OPTION_DESCRIPTION_VERSION)
 c.option('--debug', langs.OPTION_DESCRIPTION_DEBUG, false)
-c.option('-n, --name <name>', langs.OPTION_DESCRIPTION_SITE_NAME, null)
-c.option('-i, --siteId <siteId>', langs.OPTION_DESCRIPTION_SITE_ID, null)
-c.option('--no-run-daemon', langs.OPTION_DESCRIPTION_NO_RUN_DAEMON, false)
 
 // 隐藏输出内容
 c.option('-s, --silent', langs.OPTION_DESCRIPTION_SILENT, false)
 
-// 输出帮助
-c.Command.prototype.optionHelp = function () {
-  var width = this.largestOptionLength()
-  return [tool.pad('--help', width) + '  ' + langs.OPTION_DESCRIPTION_HELP]
-    .concat(this.options.map(function (option) {
-      return tool.pad(option.flags, width) + '  ' + option.description
-    }))
-    .join('\n')
-}
 
-// 帮助信息基本例子输出
-c.on('--help', function () {
-  let p = '    '
-  log.show('  Basic Examples:')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_ADD_SITE + ' :')
-  log.show(p + '$ ddv add ./app_dir')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_ADD_SITEAND_NAME + ' :')
-  log.show(p + '$ ddv add ./app_dir -n "app_name"')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_REMOVE_SITE_BY_ID + ' :')
-  log.show(p + '$ ddv remove [siteId]')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_REMOVE_SITE_BY_NAME + ' :')
-  log.show(p + '$ ddv remove [app_name]')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_START_DDV_SERVER + ' :')
-  log.show(p + '$ ddv start')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_RESTART_DDV_SERVER + ' :')
-  log.show(p + '$ ddv restart')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_RELOAD_DDV_SERVER + ' :')
-  log.show(p + '$ ddv reload')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_STOP_DDV_SERVER + ' :')
-  log.show(p + '$ ddv stop')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_KILL_DDV_SERVER + ' :')
-  log.show(p + '$ ddv kill')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_UPDATE_DDV_SERVER + ' :')
-  log.show(p + '$ npm install ddv@latest -g ; ddv update')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_ADD_SITE_HELP + ' :')
-  log.show(p + '$ ddv help add')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_REMOVE_SITE_HELP + ' :')
-  log.show(p + '$ ddv help remove')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_MORE_HELP + ' :')
-  log.show(p + '$ ddv help [command]')
-  log.show('')
-  log.show(p + langs.HELP_EXAMPLES_SHOW_MORE_EXAMPLES_IN + ' https://github.com/ddvjs/ddv#usagefeatures')
-  log.show('')
-  log.show('')
-})
+
 
 /**
  * 添加站点
@@ -754,7 +680,7 @@ tool._cmdListsColors = (site) => {
  * @api private
  */
 
-tool.pad = function pad (str, width) {
+    tool.pad = function pad (str, width) {
   var len = Math.max(0, width - str.length)
   return str + Array(len + 1).join(' ')
 }
