@@ -19,8 +19,8 @@ module.exports = function (colors) {
     'CLI_STARTUP_DAEMON_TRY_RUN': '试图启动守护线程',
 
     'CLI_COMMAND_NOT_FOUND': '找不到命令:',
-    'CLI_LISTEN_LOG_TAIL_CHANGE_START': '监听日志尾变化开始',
-    'CLI_LISTEN_LOG_TAIL_DDV_TAIL_SUPPORTED': '不支持该类型',
+        'CLI_LISTEN_LOG_TAIL_CHANGE_START': '监听日志尾变化开始',
+        'CLI_LISTEN_LOG_TAIL_DDV_TAIL_SUPPORTED': '不支持该类型',
 
     'CLI_COMMAND_ADD_STIE_FAIL': colors.red.bold('添加站点失败！'),
     'CLI_COMMAND_ADD_STIE_SUCCESS': colors.green.bold('添加网站成功！'),
