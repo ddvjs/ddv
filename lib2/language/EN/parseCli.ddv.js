@@ -36,13 +36,13 @@ module.exports = function (colors) {
         'COMMAND_RELOAD': 'Reload the ddv server site changes',
         'COMMAND_STOP': 'Stop ddv server or stop site',
 
-    'COMMAND_LISTS': 'list all site',
-    'COMMAND_LISTS_ALIAS': '(lists alias) list all site',
-    'COMMAND_LISTS_JSON': 'list all site in JSON format',
-    'COMMAND_LISTS_JSON_PRETTIFIED': 'print json in a prettified JSON',
+        'COMMAND_LISTS': 'list all site',
+        'COMMAND_LISTS_ALIAS': '(lists alias) list all site',
+        'COMMAND_LISTS_JSON': 'list all site in JSON format',
+        'COMMAND_LISTS_JSON_PRETTIFIED': 'print json in a prettified JSON',
 
     'COMMAND_KILL_DAEMON_DDV': 'Kill daemon ddv',
-    'COMMAND_RESURRECT': 'Restart the process before the resurrection',
+        'COMMAND_RESURRECT': 'Restart the process before the resurrection',
         'COMMAND_HELP': 'show command help',
 
         'COMMAND_TAIL': '\'site_name\' is the name of the site, The function of this command is to monitor the log changes, and real-time output'

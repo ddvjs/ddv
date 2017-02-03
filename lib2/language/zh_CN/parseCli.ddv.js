@@ -36,13 +36,13 @@ module.exports = function (colors) {
         'COMMAND_RELOAD': '重新加载div服务器网站的更改',
         'COMMAND_STOP': '停止DDV服务或者指定站点',
 
-    'COMMAND_LISTS': '列出所有网站',
-    'COMMAND_LISTS_ALIAS': '(lists 别名)列出所有网站',
-    'COMMAND_LISTS_JSON': '以JSON格式列出所有网站',
-    'COMMAND_LISTS_JSON_PRETTIFIED': '以美化的JSON格式列出所有网站',
+        'COMMAND_LISTS': '列出所有网站',
+        'COMMAND_LISTS_ALIAS': '(lists 别名)列出所有网站',
+        'COMMAND_LISTS_JSON': '以JSON格式列出所有网站',
+        'COMMAND_LISTS_JSON_PRETTIFIED': '以美化的JSON格式列出所有网站',
 
     'COMMAND_KILL_DAEMON_DDV': '杀死DDV守护进程',
-    'COMMAND_RESURRECT': '在复活重新启动之前进程',
+        'COMMAND_RESURRECT': '在复活重新启动之前进程',
         'COMMAND_HELP': '显示命令帮助',
 
         'COMMAND_TAIL': ['\'site_name\'是网站名称，此命令的功能是监视日志更改，并实时输出']

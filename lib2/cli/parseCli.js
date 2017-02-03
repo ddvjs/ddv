@@ -52,56 +52,6 @@ const langs = (((locale) => {
 
 
 
-/**
- * 列出站点和当前的站点状态
- */
-c
-.command('lists')
-.description(langs.COMMAND_LISTS)
-.action(function () {
-  c._cmdLists()
-})
-c
-.command('list')
-.description(langs.COMMAND_LISTS_ALIAS)
-.action(function () {
-  c._cmdLists()
-})
-
-c
-.command('ls')
-.description(langs.COMMAND_LISTS_ALIAS)
-.action(function () {
-  c._cmdLists()
-})
-
-c
-.command('l')
-.description(langs.COMMAND_LISTS_ALIAS)
-.action(function () {
-  c._cmdLists()
-})
-
-c
-.command('status')
-.description(langs.COMMAND_LISTS_ALIAS)
-.action(function () {
-  c._cmdLists()
-})
-// 返回的JSON
-c
-.command('jlist')
-.description(langs.COMMAND_LISTS_JSON)
-.action(function () {
-  c._cmdLists(true)
-})
-// 返回格式化好的JSON
-c
-.command('prettylist')
-.description(langs.COMMAND_LISTS_JSON_PRETTIFIED)
- .action(function () {
-   c._cmdLists(true, true)
- })
 
 /**
  * 杀掉守护进程
@@ -148,13 +98,6 @@ c
   })
 })
 
-// 重启后
-c
-.command('resurrect')
-.description(langs.COMMAND_RESURRECT)
-.action(function () {
-  console.log('重启了')
-})
 
 
 
