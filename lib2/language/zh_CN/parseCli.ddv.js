@@ -43,7 +43,7 @@ module.exports = function (colors) {
 
     'COMMAND_KILL_DAEMON_DDV': '杀死DDV守护进程',
     'COMMAND_RESURRECT': '在复活重新启动之前进程',
-    'COMMAND_HELP': '显示命令帮助',
+        'COMMAND_HELP': '显示命令帮助',
 
         'COMMAND_TAIL': ['\'site_name\'是网站名称，此命令的功能是监视日志更改，并实时输出']
   }

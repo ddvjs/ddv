@@ -18,7 +18,7 @@ module.exports = function (colors) {
 
     'CLI_STARTUP_DAEMON_TRY_RUN': 'Attempt to start a daemon thread',
 
-    'CLI_COMMAND_NOT_FOUND': 'Command not found:',
+        'CLI_COMMAND_NOT_FOUND': 'Command not found:',
         'CLI_LISTEN_LOG_TAIL_CHANGE_START': 'Listen to the log tail change start',
         'CLI_LISTEN_LOG_TAIL_DDV_TAIL_SUPPORTED': 'This type is not supported',
 

@@ -43,7 +43,7 @@ module.exports = function (colors) {
 
     'COMMAND_KILL_DAEMON_DDV': 'Kill daemon ddv',
     'COMMAND_RESURRECT': 'Restart the process before the resurrection',
-    'COMMAND_HELP': 'show command help',
+        'COMMAND_HELP': 'show command help',
 
         'COMMAND_TAIL': '\'site_name\' is the name of the site, The function of this command is to monitor the log changes, and real-time output'
   }
