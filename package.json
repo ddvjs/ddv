@@ -71,7 +71,7 @@
     "restart": "ddv restart",
     "reload": "ddv reload",
     "stop": "ddv stop",
-    "test": "ddv test",
+    "test": "npm run lint",
     "kill": "ddv kill",
     "help": "ddv help",
     "lint": "eslint --ext .js lib bin/*",
