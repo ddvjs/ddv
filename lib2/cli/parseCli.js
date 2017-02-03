@@ -50,37 +50,6 @@ const langs = (((locale) => {
   return langs
 })(config.locale))
 
-
-
-
-
-
-
-/**
- * 监听文件末尾变化
- */
-c
-.command('guid [setGuid]')
-.description(langs.COMMAND_TAIL)
-.action(function (setGuid) {
-  c.__api('guid', {set_guid: (setGuid == void 0 ? null : setGuid)}, (err, res) => {
-    let logkey = 'CLI_COMMAND_GUID_' + (setGuid ? 'SET_' : 'GET_')
-      // 加入成功失败
-    logkey += err ? 'FAIL' : 'SUCCESS'
-      // 提示结果
-    log.tip((err ? 'ERR ' : ' OK '), logkey)
-    if (err) {
-      console.error(colors.grey(err.message))
-      console.error('')
-    } else {
-      log.tip((err ? 'ERR ' : ' OK '), ['CLI_COMMAND_GUID_TIP', res.guid])
-    }
-    c.__disconnect()
-    logkey = void 0
-  })
-})
-
-
 // 通过路径获取name
 c._cmdGetPathName = function (_path, name) {
   const r = Object.create(null)
