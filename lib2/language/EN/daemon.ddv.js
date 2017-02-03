@@ -27,7 +27,7 @@ module.exports = function (colors) {
 
     'CLI_COMMAND_GET_STIE_LISTS_FAIL': colors.red.bold('get site lists fail!'),
 
-    'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('The command line argument can not be null!'),
+        'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('The command line argument can not be null!'),
 
     'CLI_COMMAND_REMOVE_STIE_FAIL': colors.red.bold('Remove a site failed!'),
     'CLI_COMMAND_START_STIE_FAIL': colors.red.bold('Start a site failed!'),

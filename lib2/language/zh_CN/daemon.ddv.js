@@ -27,7 +27,7 @@ module.exports = function (colors) {
 
     'CLI_COMMAND_GET_STIE_LISTS_FAIL': colors.red.bold('获取网站列表失败！'),
 
-    'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('命令行参数不能为空!'),
+        'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('命令行参数不能为空!'),
 
     'CLI_COMMAND_REMOVE_STIE_FAIL': colors.red.bold('删除站点失败!'),
     'CLI_COMMAND_START_STIE_FAIL': colors.red.bold('开启站点失败!'),
