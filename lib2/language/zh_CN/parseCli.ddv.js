@@ -27,14 +27,14 @@ module.exports = function (colors) {
         'HELP_EXAMPLES_SHOW_ADD_SITE_HELP': '添加站点帮助',
         'HELP_EXAMPLES_SHOW_REMOVE_SITE_HELP': '删除站点帮助',
 
-    'COMMAND_ADD_AN_SITE_AND_SITEAND_NAME': '添加一个站点，并且设置站点名字',
-    'COMMAND_REMOVE_AN_SITE': '删除一个站点',
-    'COMMAND_REMOVE_ALIAS_AN_SITE': '(remove 别名)删除一个站点',
+        'COMMAND_ADD_AN_SITE_AND_SITEAND_NAME': '添加一个站点，并且设置站点名字',
+        'COMMAND_REMOVE_AN_SITE': '删除一个站点',
+        'COMMAND_REMOVE_ALIAS_AN_SITE': '(remove 别名)删除一个站点',
 
-    'COMMAND_START': '启动DDV服务或者指定站点',
-    'COMMAND_RESTART': '重启DDV服务或者指定站点',
-    'COMMAND_RELOAD': '重新加载div服务器网站的更改',
-    'COMMAND_STOP': '停止DDV服务或者指定站点',
+        'COMMAND_START': '启动DDV服务或者指定站点',
+        'COMMAND_RESTART': '重启DDV服务或者指定站点',
+        'COMMAND_RELOAD': '重新加载div服务器网站的更改',
+        'COMMAND_STOP': '停止DDV服务或者指定站点',
 
     'COMMAND_LISTS': '列出所有网站',
     'COMMAND_LISTS_ALIAS': '(lists 别名)列出所有网站',

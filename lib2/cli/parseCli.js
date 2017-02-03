@@ -51,87 +51,6 @@ const langs = (((locale) => {
 })(config.locale))
 
 
-/**
- * 添加站点
- */
-c
-.command('add <file|path>')
-.option('-n, --name <name>', 'set a <name> for site')
-.description(langs.COMMAND_ADD_AN_SITE_AND_SITEAND_NAME)
-.action(function (path) {
-  c.__api('add', c._cmdGetPathName(path, c.name), function callback (e, res) {
-    if (e) {
-      log.tip('FAIL', 'CLI_COMMAND_ADD_STIE_FAIL')
-      console.error(colors.grey(e.message))
-      console.error('')
-      console.error(e)
-      c.__disconnect()
-    } else {
-      log.tip(' OK ', 'CLI_COMMAND_ADD_STIE_SUCCESS')
-      // 显示列表
-      c._cmdLists()
-    }
-  })
-  path = undefined
-})
-
-// 移除
-c
-.command('remove [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2', '')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', -1)
-.description(langs.COMMAND_REMOVE_AN_SITE)
-.action(function remove () { c._cmdFnBySiteIdName.call(c, 'remove') })
-// 移除 remove的别名
-c
-.command('delete [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', '')
-.description(langs.COMMAND_REMOVE_ALIAS_AN_SITE)
-.action(function remove () { c._cmdFnBySiteIdName.call(c, 'remove') })
-// 移除 remove的别名
-c
-.command('del [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', '')
-.description(langs.COMMAND_REMOVE_ALIAS_AN_SITE)
-.action(function remove () { c._cmdFnBySiteIdName.call(c, 'remove') })
-
-/**
- * 开启服务进程
- */
-c
-.command('start [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', '')
-.description(langs.COMMAND_START)
-.action(function start () { c._cmdFnBySiteIdName.call(c, 'start') })
-/**
-* 重启服务进程
-*/
-c
-.command('restart [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', '')
-.description('Restart ddv server or restart site')
-.description(langs.COMMAND_RESTART)
-.action(function restart () { c._cmdFnBySiteIdName.call(c, 'restart') })
-/**
-* 重启服务进程
-*/
-c
-.command('reload')
-.description(langs.COMMAND_RELOAD)
-.action(function reload () { c._cmdFnBySiteIdName.call(c, 'reload') })
-/**
-* 停止服务进程
-*/
-c
-.command('stop [name|siteId]')
-.option('-n, --name <names>', '<names> eg: -n app1,app2')
-.option('-i, --siteId <siteIds>', '<siteIds> eg: -s 1,2', '')
-.description(langs.COMMAND_STOP)
-.action(function stop () { c._cmdFnBySiteIdName.call(c, 'stop') })
 
 /**
  * 列出站点和当前的站点状态
@@ -281,72 +200,6 @@ c._cmdGetPathName = function (_path, name) {
   r.name = name
   return r
 }
-// 通过siteId或者站点名字操作
-c._cmdFnBySiteIdName = function (type) {
-  var args = Object.create(null)
-  args.siteIds = []
-  args.name = []
-  if (b.is.number(c.args && c.args[0])) {
-    args.siteIds.push(c.args[0])
-  } else if (b.is.string(c.args && c.args[0])) {
-    args.name.push(c.args[0])
-  }
-  b.each((c.siteId || '').split(','), function (index, t) {
-    if (t) {
-      b.each((t || '').split('|'), function (index, siteId) {
-        if (siteId) {
-          args.siteIds.push(siteId)
-        }
-      })
-    }
-  })
-  b.each((c.name || '').split(','), function (index, t) {
-    if (t) {
-      b.each((t || '').split('|'), function (index, name) {
-        if (name) {
-          args.name.push(name)
-        }
-      })
-    }
-  })
-  args.siteIds = args.siteIds.join(',')
-  args.name = args.name.join(',')
-  let isServer = !(args.siteIds || args.name)
-  if (isServer) {
-    switch (type || '') {
-      case 'start':
-      case 'restart':
-      case 'reload':
-      case 'stop':
-        break
-      default:
-        log.tip('ERR ', 'CLI_COMMAND_ARGUMENTS_NOT_EMPTY')
-        c.parse([c.argv_source[0], c.argv_source[1], type, '--help'])
-        args = type = void 0
-        return
-    }
-  }
-
-  c.__api(type, args, (err, res) => {
-    let logkey = 'CLI_COMMAND_' + type.toUpperCase()
-      // 加入服务器或者站点
-    logkey += isServer ? '_SERVER_' : '_STIE_'
-      // 加入成功失败
-    logkey += err ? 'FAIL' : 'SUCCESS'
-      // 提示结果
-    log.tip((err ? 'ERR ' : ' OK '), logkey)
-    if (err) {
-      console.error(colors.grey(err.message))
-      console.error('')
-      c.__disconnect()
-    } else {
-      // 显示列表
-      c._cmdLists()
-    }
-    logkey = isServer = type = void 0
-  })
-  args = void 0
-}
 // 显示列表
 c._cmdLists = function _cmdLists (isEchoJson, isPrettifiedJson) {
   c.__api(true, 'lists', {
@@ -371,7 +224,7 @@ c._cmdLists = function _cmdLists (isEchoJson, isPrettifiedJson) {
           style: {'padding-left': 1, head: ['cyan', 'bold'], compact: true}
         })
         b.each(res, function (siteId, site) {
-          if (site.children && site.children.length == 1) {
+          if (site.children && site.children.length === 1) {
             delete site.children[0].name
             b.extend(true, site, site.children[0])
             delete site.children

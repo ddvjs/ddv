@@ -27,14 +27,14 @@ module.exports = function (colors) {
         'HELP_EXAMPLES_SHOW_ADD_SITE_HELP': 'Add site help',
         'HELP_EXAMPLES_SHOW_REMOVE_SITE_HELP': 'Remove site help',
 
-    'COMMAND_ADD_AN_SITE_AND_SITEAND_NAME': 'Add an site + set a name',
-    'COMMAND_REMOVE_AN_SITE': 'Remove an site',
-    'COMMAND_REMOVE_ALIAS_AN_SITE': '(remove alias) Remove an site',
+        'COMMAND_ADD_AN_SITE_AND_SITEAND_NAME': 'Add an site + set a name',
+        'COMMAND_REMOVE_AN_SITE': 'Remove an site',
+        'COMMAND_REMOVE_ALIAS_AN_SITE': '(remove alias) Remove an site',
 
-    'COMMAND_START': 'Start ddv server or start site',
-    'COMMAND_RESTART': 'Restart ddv server or start site',
-    'COMMAND_RELOAD': 'Reload the ddv server site changes',
-    'COMMAND_STOP': 'Stop ddv server or stop site',
+        'COMMAND_START': 'Start ddv server or start site',
+        'COMMAND_RESTART': 'Restart ddv server or start site',
+        'COMMAND_RELOAD': 'Reload the ddv server site changes',
+        'COMMAND_STOP': 'Stop ddv server or stop site',
 
     'COMMAND_LISTS': 'list all site',
     'COMMAND_LISTS_ALIAS': '(lists alias) list all site',
