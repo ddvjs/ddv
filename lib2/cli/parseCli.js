@@ -53,51 +53,6 @@ const langs = (((locale) => {
 
 
 
-/**
- * 杀掉守护进程
- */
-c
-.command('kill')
-.option('-p --pid <pid>', 'kill pid')
-.description(langs.COMMAND_KILL_DAEMON_DDV)
-.action(function () {
-  c.__api(true, 'kill', {
-    'pid': c.pid
-  }, function callback (e, res) {
-    if (e) {
-      console.log('kill-结果失败', e)
-    } else {
-      let [colAligns, head, Table, table, t] = [[], [], require('cli-table2')]
-      // 实例
-      b.each(res, function (index, pidt) {
-        t = []
-        b.each(pidt, function (name, value) {
-          if (!table) {
-            head[head.length] = name
-            colAligns[colAligns.length] = 'center'
-          }
-          t.push(value)
-        })
-        if (!table) {
-          table = new Table({
-            head: head,
-            colAligns: colAligns,
-            style: {'padding-left': 1, head: ['cyan', 'bold'], compact: true}
-          })
-          head = colAligns = undefined
-        }
-        table.push(t)
-        t = undefined
-      })
-      console.log('kill-结果成功')
-      if (table) {
-        console.log(table.toString())
-      }
-      table = head = colAligns = undefined
-    }
-  })
-})
-
 
 
 
