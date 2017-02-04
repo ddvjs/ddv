@@ -8,8 +8,6 @@ const c = require('commander')
 const path = require('path')
 // colors 模块
 const colors = require('colors')
-// child_process 模块
-const childProcess = require('child_process')
 // Api模块
 const Api = require('../api/index.js')
 // cjbbase模块
@@ -191,7 +189,7 @@ tool._cmdListsColors = (site) => {
  * @api private
  */
 
-    tool.pad = function pad (str, width) {
+tool.pad = function pad (str, width) {
   var len = Math.max(0, width - str.length)
   return str + Array(len + 1).join(' ')
 }
