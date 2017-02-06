@@ -47,6 +47,10 @@ api.close = function close () {
     } catch (e) {}
   }
 }
+daemon.on('ddvDaemonClose', () => {
+  api.close()
+})
+
 // 监听初始化
 fn.listenInit = function listenInit (callback) {
   var q
