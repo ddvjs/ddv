@@ -2,9 +2,19 @@
 'use strict'
 // 标题
 process.title = 'ddvBin'
+'use strict'
+// ddv路径模块
 const ddvPath = require('../ddvPath')
-if (process.argv.indexOf('--no-run-daemon') > -1) {
-  require(ddvPath('lib/daemon/index.js'))
-} else {
-  require(ddvPath('lib/cli'))
-}
+// 获取配置信息
+const config = require(ddvPath('lib/config'))
+
+config.getConfig().catch(e => {
+  return config
+}).then(() => {
+  if (process.argv.indexOf('--no-run-daemon') > -1) {
+    require(ddvPath('lib/daemon/index.js'))
+  } else {
+    require(ddvPath('lib/cli'))
+  }
+})
+
