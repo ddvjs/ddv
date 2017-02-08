@@ -72,10 +72,9 @@ c._cmdLists = function _cmdLists (isEchoJson, isPrettifiedJson) {
   }, function callback (e, res) {
     if (e) {
       // 提示获取失败
-      log.tip('FAIL', 'CLI_COMMAND_GET_STIE_LISTS_FAIL')
-      console.error(colors.red(e.message))
-      console.error('')
-      console.error(e)
+      log.tip('FAIL', 'cli.command.lists.fail')
+      // 详细错误
+      log.error(e)
     } else {
       if (isEchoJson) {
         console.log(colors.yellow(JSON.stringify(res, null, (isPrettifiedJson ? 2 : null))))
