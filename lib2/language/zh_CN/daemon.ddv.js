@@ -16,38 +16,8 @@ module.exports = function (colors) {
     'CLI_STARTUP_USE_RIGHT_PLATFORM': '-----你确定你使用了正确的平台命令行选项？centos / redhat, amazon, ubuntu, gentoo, systemd or darwin ?',
     'CLI_STARTUP_NOT_USER_ROOT_RUN_COMMAND': '无权操作，请您以管理员身份运行以下命令: ',
 
-    'CLI_STARTUP_DAEMON_TRY_RUN': '试图启动守护线程',
+    'CLI_STARTUP_DAEMON_TRY_RUN': '试图启动守护线程'
 
-    'CLI_COMMAND_ADD_STIE_FAIL': colors.red.bold('添加站点失败！'),
-    'CLI_COMMAND_ADD_STIE_SUCCESS': colors.green.bold('添加网站成功！'),
-
-    'CLI_COMMAND_GET_STIE_LISTS_FAIL': colors.red.bold('获取网站列表失败！'),
-
-    'CLI_COMMAND_REMOVE_STIE_FAIL': colors.red.bold('删除站点失败!'),
-    'CLI_COMMAND_START_STIE_FAIL': colors.red.bold('开启站点失败!'),
-    'CLI_COMMAND_RESTART_STIE_FAIL': colors.red.bold('重启站点失败!'),
-    'CLI_COMMAND_STOP_STIE_FAIL': colors.red.bold('停止站点失败!'),
-
-    'CLI_COMMAND_START_SERVER_FAIL': colors.red.bold('开启服务失败!'),
-    'CLI_COMMAND_RESTART_SERVER_FAIL': colors.red.bold('重启服务失败!'),
-    'CLI_COMMAND_RELOAD_SERVER_FAIL': colors.red.bold('重载站点失败!'),
-    'CLI_COMMAND_STOP_SERVER_FAIL': colors.red.bold('停止服务失败!'),
-
-    'CLI_COMMAND_REMOVE_STIE_SUCCESS': colors.green.bold('删除站点成功!'),
-    'CLI_COMMAND_START_STIE_SUCCESS': colors.green.bold('开启站点成功!'),
-    'CLI_COMMAND_RESTART_STIE_SUCCESS': colors.green.bold('重启站点成功!'),
-    'CLI_COMMAND_STOP_STIE_SUCCESS': colors.green.bold('停止站点成功!'),
-
-    'CLI_COMMAND_START_SERVER_SUCCESS': colors.green.bold('开启服务成功!'),
-    'CLI_COMMAND_RESTART_SERVER_SUCCESS': colors.green.bold('重启服务成功!'),
-    'CLI_COMMAND_RELOAD_SERVER_SUCCESS': colors.green.bold('重载站点成功!'),
-    'CLI_COMMAND_STOP_SERVER_SUCCESS': colors.green.bold('停止服务成功!'),
-
-    'CLI_COMMAND_GUID_GET_FAIL': colors.red.bold('获取服务器guid失败!'),
-    'CLI_COMMAND_GUID_GET_SUCCESS': colors.green.bold('获取服务器guid成功!'),
-    'CLI_COMMAND_GUID_SET_FAIL': colors.red.bold('设置服务器guid失败!'),
-    'CLI_COMMAND_GUID_SET_SUCCESS': colors.green.bold('设置服务器guid成功!'),
-    'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:')
   }
   return l
 }
