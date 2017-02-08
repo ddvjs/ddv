@@ -18,16 +18,10 @@ module.exports = function (colors) {
 
     'CLI_STARTUP_DAEMON_TRY_RUN': 'Attempt to start a daemon thread',
 
-        'CLI_COMMAND_NOT_FOUND': 'Command not found:',
-        'CLI_LISTEN_LOG_TAIL_CHANGE_START': 'Listen to the log tail change start',
-        'CLI_LISTEN_LOG_TAIL_DDV_TAIL_SUPPORTED': 'This type is not supported',
-
     'CLI_COMMAND_ADD_STIE_FAIL': colors.red.bold('add site fail!'),
     'CLI_COMMAND_ADD_STIE_SUCCESS': colors.green.bold('add site success!'),
 
     'CLI_COMMAND_GET_STIE_LISTS_FAIL': colors.red.bold('get site lists fail!'),
-
-        'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('The command line argument can not be null!'),
 
     'CLI_COMMAND_REMOVE_STIE_FAIL': colors.red.bold('Remove a site failed!'),
     'CLI_COMMAND_START_STIE_FAIL': colors.red.bold('Start a site failed!'),
@@ -55,10 +49,6 @@ module.exports = function (colors) {
     'CLI_COMMAND_GUID_SET_SUCCESS': colors.green.bold('Setting the server GUID success!'),
     'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:'),
 
-    'DAEMON_RUN_EXIT_EVENT_TIP': 'System requirements receive exit signals',
-    'DAEMON_RUN_RES_DAEMON_REPEAT': 'Daemon thread is repeated start',
-    'DAEMON_RUN_RES_DAEMON_SUCCSS': 'Daemon threads started successfully',
-    'DAEMON_RUN_RES_DAEMON_FAIL': 'Daemon thread failed to start',
     'DAEMON_RUN_SERVER_API_START': 'The daemon thread is in the outbound RPC-API service startup'
   }
   return l

@@ -18,16 +18,10 @@ module.exports = function (colors) {
 
     'CLI_STARTUP_DAEMON_TRY_RUN': '试图启动守护线程',
 
-        'CLI_COMMAND_NOT_FOUND': '找不到命令:',
-        'CLI_LISTEN_LOG_TAIL_CHANGE_START': '监听日志尾变化开始',
-        'CLI_LISTEN_LOG_TAIL_DDV_TAIL_SUPPORTED': '不支持该类型',
-
     'CLI_COMMAND_ADD_STIE_FAIL': colors.red.bold('添加站点失败！'),
     'CLI_COMMAND_ADD_STIE_SUCCESS': colors.green.bold('添加网站成功！'),
 
     'CLI_COMMAND_GET_STIE_LISTS_FAIL': colors.red.bold('获取网站列表失败！'),
-
-        'CLI_COMMAND_ARGUMENTS_NOT_EMPTY': colors.red.bold('命令行参数不能为空!'),
 
     'CLI_COMMAND_REMOVE_STIE_FAIL': colors.red.bold('删除站点失败!'),
     'CLI_COMMAND_START_STIE_FAIL': colors.red.bold('开启站点失败!'),
@@ -55,10 +49,6 @@ module.exports = function (colors) {
     'CLI_COMMAND_GUID_SET_SUCCESS': colors.green.bold('设置服务器guid成功!'),
     'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:'),
 
-    'DAEMON_RUN_EXIT_EVENT_TIP': '收到系统要求退出信号',
-    'DAEMON_RUN_RES_DAEMON_REPEAT': '后台守护线程被重复启动',
-    'DAEMON_RUN_RES_DAEMON_SUCCSS': '后台守护线程启动成功',
-    'DAEMON_RUN_RES_DAEMON_FAIL': '后台守护线程启动失败',
     'DAEMON_RUN_SERVER_API_START': '后台守护线程对外RPC-API服务启动中'
   }
   return l
