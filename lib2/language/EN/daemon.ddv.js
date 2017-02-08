@@ -47,9 +47,7 @@ module.exports = function (colors) {
     'CLI_COMMAND_GUID_GET_SUCCESS': colors.green.bold('get the server GUID success!'),
     'CLI_COMMAND_GUID_SET_FAIL': colors.red.bold('Setting the server GUID failed!'),
     'CLI_COMMAND_GUID_SET_SUCCESS': colors.green.bold('Setting the server GUID success!'),
-    'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:'),
-
-    'DAEMON_RUN_SERVER_API_START': 'The daemon thread is in the outbound RPC-API service startup'
+    'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:')
   }
   return l
 }

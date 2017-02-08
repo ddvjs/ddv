@@ -47,9 +47,7 @@ module.exports = function (colors) {
     'CLI_COMMAND_GUID_GET_SUCCESS': colors.green.bold('获取服务器guid成功!'),
     'CLI_COMMAND_GUID_SET_FAIL': colors.red.bold('设置服务器guid失败!'),
     'CLI_COMMAND_GUID_SET_SUCCESS': colors.green.bold('设置服务器guid成功!'),
-    'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:'),
-
-    'DAEMON_RUN_SERVER_API_START': '后台守护线程对外RPC-API服务启动中'
+    'CLI_COMMAND_GUID_TIP': colors.green.bold('GUID:')
   }
   return l
 }
