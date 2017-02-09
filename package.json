@@ -91,5 +91,5 @@
     "postversion": "node ./scripts/ddvscripts postversion",
     "envjson": "node ./scripts/ddvscripts envjson"
   },
-  "version": "1.1.33"
+  "version": "1.1.34"
 }
