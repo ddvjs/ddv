@@ -2,7 +2,6 @@
 'use strict'
 // 标题
 process.title = 'ddvBin'
-'use strict'
 // ddv路径模块
 const ddvPath = require('../ddvPath')
 // 获取配置信息
